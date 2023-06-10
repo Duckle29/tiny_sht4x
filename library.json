@@ -1,30 +1,39 @@
 {
-    "name": "tiny_sht4x",
-    "version": "1.0.0",
-    "description": "Integer only, no division, SHT4x Humidity/Temperature Sensor library",
-    "keywords": "interface, sensor, humidity, temperature, SHT40, SHT41, SHT45",
-    "repository":
+  "name": "tiny_sht4x",
+  "version": "1.0.1",
+  "description": "Integer only, no division, SHT4x Humidity/Temperature Sensor library",
+  "keywords": "interface, sensor, humidity, temperature, SHT40, SHT41, SHT45",
+  "repository":
+  {
+    "type": "git",
+    "url": "git@github.com:Duckle29/tiny_sht4x.git"
+  },
+  "authors":
+  [
     {
-      "type": "git",
-      "url": "git@github.com:Duckle29/tiny_sht4x.git"
-    },
-    "authors":
-    [
+      "name": "Mikkel Jeppesen",
+      "url": "https://github.com/Duckle29",
+      "maintainer": true
+    }
+  ],
+  "exclude": [
+    ".gitignore"
+  ],
+  "license": "Unlicense",
+  "dependencies": {
+  },
+  "frameworks": "*",
+  "platforms": "*",
+  "examples": [
       {
-        "name": "Mikkel Jeppesen",
-        "url": "https://github.com/Duckle29",
-        "maintainer": true
+          "name": "basic",
+          "base": "examples/basic",
+          "files": ["basic.ino"]
+      },
+      {
+          "name": "advanced",
+          "base": "examples/advanced",
+          "files": ["advanced.ino"]
       }
-    ],
-    "exclude": [
-      ".gitignore"
-    ],
-    "license": "Unlicense",
-    "dependencies": {
-    },
-    "frameworks": "*",
-    "platforms": "*",
-    "examples": "examples/*/*.ino"
-  }
-  
-  
+  ]
+}
