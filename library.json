@@ -1,0 +1,30 @@
+{
+    "name": "tiny_sht4x",
+    "version": "1.0.0",
+    "description": "Integer only, no division, SHT4x Humidity/Temperature Sensor library",
+    "keywords": "interface, sensor, humidity, temperature, SHT40, SHT41, SHT45",
+    "repository":
+    {
+      "type": "git",
+      "url": "git@github.com:Duckle29/tiny_sht4x.git"
+    },
+    "authors":
+    [
+      {
+        "name": "Mikkel Jeppesen",
+        "url": "https://github.com/Duckle29",
+        "maintainer": true
+      }
+    ],
+    "exclude": [
+      ".gitignore"
+    ],
+    "license": "Unlicense",
+    "dependencies": {
+    },
+    "frameworks": "*",
+    "platforms": "*",
+    "examples": "examples/*/*.ino"
+  }
+  
+  
