@@ -36,7 +36,7 @@ class SHT4x
     uint32_t get_sn();
 
     // https://hackaday.com/2020/06/12/binary-math-tricks-shifting-to-divide-by-ten-aint-easy/
-    unsigned divu10(unsigned n);
+    uint32_t divu10(uint32_t n, uint8_t times=1);
     void get_response(uint8_t buff[], uint8_t timeout=10);
     
     private:

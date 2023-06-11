@@ -123,16 +123,29 @@ uint32_t SHT4x::get_sn()
 }
 
 // https://hackaday.com/2020/06/12/binary-math-tricks-shifting-to-divide-by-ten-aint-easy/
-unsigned SHT4x::divu10(unsigned n) {
-  unsigned q, r;
-  q = (n >> 1) + (n >> 2);
-  q = q + (q >> 4);
-  q = q + (q >> 8);
-  q = q + (q >> 16);
-  q = q >> 3;
-  r = n - (((q << 2) + q) << 1);
-  return q + (r > 9);
+uint32_t SHT4x::divu10(uint32_t n, uint8_t times) 
+{
+    if (times == 0)
+    {
+        return n;
+    }
+    
+    unsigned q, r;
+    q = (n >> 1) + (n >> 2);
+    q = q + (q >> 4);
+    q = q + (q >> 8);
+    q = q + (q >> 16);
+    q = q >> 3;
+    r = n - (((q << 2) + q) << 1);
+    
+    if (times > 0)
+    {
+        return m_divu10(q + (r > 9), --times);
+    }
+    
+    return q + (r > 9);
 }
+
 
 uint8_t SHT4x::calc_crc(uint16_t data)
 {
