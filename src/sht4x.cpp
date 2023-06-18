@@ -140,7 +140,7 @@ uint32_t SHT4x::divu10(uint32_t n, uint8_t times)
     
     if (times > 0)
     {
-        return m_divu10(q + (r > 9), --times);
+        return divu10(q + (r > 9), --times);
     }
     
     return q + (r > 9);
