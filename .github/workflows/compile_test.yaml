@@ -1,0 +1,14 @@
+name: Compile test
+
+on: push
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Setup PlatformIO
+        uses: n-vr/setup-platformio-action@v1
+      - name: Platformio ci
+        run: pio ci --lib src --project-conf platformio.ini examples/advanced/advanced.ino

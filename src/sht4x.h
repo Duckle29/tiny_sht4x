@@ -1,6 +1,11 @@
 #pragma once
 
+#if defined(ESP32) || defined(ESP8266)
+#define _delay_ms(ms) delayMicroseconds((ms)*1000)
+#elif defined(AVR)
 #include <util/delay.h>
+#endif
+
 #include <inttypes.h>
 #include <Wire.h>
 
@@ -26,7 +31,7 @@ class SHT4x
     public:
     SHT4x();
 
-    bool init(uint8_t address= 0x44, TwoWire & = Wire);
+    void init(uint8_t address= 0x44, TwoWire & = Wire);
     
     void send_cmd(SHT4x_cmd_t cmd);
     void send_cmd(uint8_t cmd);

@@ -4,7 +4,7 @@ SHT4x::SHT4x()
 {}
 
 
-bool SHT4x::init(uint8_t address, TwoWire &wirePort)
+void SHT4x::init(uint8_t address, TwoWire &wirePort)
 {
     m_SHT4x_addr = address;
     m_wire = &wirePort;   

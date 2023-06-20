@@ -1,6 +1,6 @@
 {
   "name": "tiny_sht4x",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Integer only, no division, SHT4x Humidity/Temperature Sensor library",
   "keywords": "interface, sensor, humidity, temperature, SHT40, SHT41, SHT45",
   "repository":
@@ -20,8 +20,8 @@
     ".gitignore"
   ],
   "license": "Unlicense",
-  "frameworks": "*",
-  "platforms": "*",
+  "frameworks": ["Arduino"],
+  "platforms": ["atmelavr", "atmelmegaavr", "espressif8266", "espressif32"],
   "examples": [
       {
           "name": "basic",
